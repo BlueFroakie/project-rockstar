@@ -14,12 +14,12 @@ class GitHub{
   return { profile };
  }
 
- async showRepos(repos) {
-   const profileRepoResponse = await fetch(
-     `https://api.github.com/users/${this.getUser().userName}/${repos}`
+ async showRepos(user) {
+   const profileReposResponse = await fetch(
+     `https://api.github.com/users/${user}/repos?client_id=${this.client_id}$client_secret=${this.client_secret}`
    );
 
-   const profileRepo = await profileRepoResponse.json();
-   return { profileRepo };
+   const profileRepos = await profileReposResponse.json();
+   return { profileRepos };
  }
 }

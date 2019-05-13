@@ -17,8 +17,12 @@ searchUser.addEventListener("keyup", e => {
                console.log(data);
                const ui = new UI();
                ui.showProfile(data.profile);
+               github.showRepos(userText).then(data => {
+                console.log(data);
+                ui.showRepos(data.profileRepos);
+               })
+               .catch();
            }
-        //github.showRepos
        })
        .catch();
    } else {
