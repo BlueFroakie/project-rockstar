@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  div.ships(style="width:" + (size * 20) + "px;height:" + (size * 20) + "px;")
+    //h2=JSON.stringify(ships)
+    for ship in ships
+      div.ship(style="top:" + (ship.coords.y * 10) + "px;left:" + (ship.coords.x * 10) + "px;width:" + (ship.size.w * 10) + "px;height:" + (ship.size.h * 10) + "px") 
+        h5= ship.name
+  div.controls
+    a#dropBomb Drop bomb
+    input#inputx(type="number" placeholder="X")
+    input#inputy(type="number" placeholder="Y")

@@ -18,7 +18,6 @@ searchGIFS.addEventListener("keyup", e => {
                const ui = new UI();
                ui.showGIFS(data.gifs);
            }
-        //github.showRepos
        })
        .catch();
    } else {

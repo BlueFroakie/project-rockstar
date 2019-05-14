@@ -1,0 +1,11 @@
+.success,.error {
+    color: white;
+}
+
+.success {
+    background: green;
+}
+
+.error {
+    background: red;
+}
